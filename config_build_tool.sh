@@ -849,14 +849,14 @@ function prepare() {
                 # 若检出标签失败，则删除openwrt目录并重新克隆OpenWrt源码
                 if [ $exitstatus -ne 0 ]; then
                     rm -rf $openwrt_dir
-                    git clone https://github.com/openwrt/openwrt $openwrt_dir || return 4
+                    git clone https://github.com/missing233/openwrt $openwrt_dir || return 4
                     cd $openwrt_dir
                     git checkout $OPENWRT_TAG_BRANCH || return 7
                 fi
             fi
         fi
     else
-        git clone https://github.com/openwrt/openwrt $openwrt_dir || return 4
+        git clone https://github.com/missing233/openwrt $openwrt_dir || return 4
         cd $openwrt_dir
         git checkout $OPENWRT_TAG_BRANCH || return 7
     fi
