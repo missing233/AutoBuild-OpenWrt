@@ -13,9 +13,6 @@ main() {
         update)
             check_curl
             case "${arg}" in
-                rules)
-                    update_rule
-                    ;;
                 packages)
                     update_package
                     ;;
