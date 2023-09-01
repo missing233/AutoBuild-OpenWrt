@@ -57,7 +57,7 @@ runs:
                 echo "::error ::$i配置中缺少拓展软件包配置文件(OpenWrt-K/extpackages.config)即使为空也应该存在,请尝试使用新版OpenWrt-k配置构建工具"
                 exit 1
               fi
-              git clone https://github.com/missing233/openwrt.git $GITHUB_WORKSPACE/openwrt
+              git clone https://github.com/openwrt/openwrt.git $GITHUB_WORKSPACE/openwrt
               cd $GITHUB_WORKSPACE/openwrt
               export OPENWRT_TAG_BRANCH="$(sed -n '/openwrt_tag\/branch/p' $GITHUB_WORKSPACE/config/$i/OpenWrt-K/compile.config | sed -e 's/.*=//')"
               git checkout $OPENWRT_TAG_BRANCH
