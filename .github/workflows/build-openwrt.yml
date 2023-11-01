@@ -301,7 +301,7 @@ jobs:
       - name: 克隆源代码
         working-directory:  ${{ env.WORKSPACE_ROOT_PATH }}
         run: |
-          git clone https://github.com/missing233/openwrt.git
+          git clone https://github.com/openwrt/openwrt.git
           cd openwrt
           export OPENWRT_ROOT_PATH="$(pwd)"
           echo "OPENWRT_ROOT_PATH=$OPENWRT_ROOT_PATH" >> $GITHUB_ENV
