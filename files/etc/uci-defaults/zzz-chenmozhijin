@@ -4,9 +4,6 @@ uci commit network
 /etc/init.d/network restart
 sed -i "/^DISTRIB_DESCRIPTION='/s/'$/ Compiled by 沉默の金'/" /etc/openwrt_release
 [ -d "/etc/init.d" ] && chmod +x /etc/init.d/*
-echo "0 2 * * * /usr/share/cmzj/openwrt-k_tool.sh update rules" >>/etc/crontabs/root
-ln -s /usr/share/cmzj/openwrt-k_tool.sh /bin/openwrt-k
-chmod +x /usr/share/cmzj/openwrt-k_tool.sh
 uci commit
 exit 0
 
